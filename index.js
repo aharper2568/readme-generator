@@ -1,7 +1,9 @@
-const inquirer = require('inquirer');
-const fs = require('fs');
-const generateMarkdown = require('./utils/generateMarkdown');
+// Import required packages
+const inquirer = require('inquirer'); //For prompting user input
+const fs = require('fs'); // To write and save files
+const generateMarkdown = require('./utils/generateMarkdown'); // imported file generation function
 
+// Prompt questions put into an array of objects
 const questions = [
   {
     type: 'input',
@@ -50,18 +52,18 @@ const questions = [
     message: 'Enter your email address:',
   },
 ];
-
+// writing function
 function writeToFile(fileName, data) {
   fs.writeFile(fileName, data, (err) => {
     if (err) {
-      return console.log(err);
+      return console.log(err); // log if error
     }
-    console.log('README.md has been generated');
+    console.log('README.md has been generated'); // log if successful
   });
 }
-
+// initialize function
 function init() {
-  inquirer
+  inquirer // prompt users with array of questions
     .prompt(questions)
     .then((answers) => {
       const readmeContent = generateMarkdown(answers);
@@ -71,5 +73,5 @@ function init() {
       console.error('Error:', error);
     });
 }
-
+ // call init function
 init();
