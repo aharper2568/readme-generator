@@ -26,6 +26,7 @@ The terminal will proceed to run the program, taking the answers given and retur
 
 ## URLs
 [Live Repo](https://github.com/aharper2568/readme-generator)
+[Video Tutorial](https://drive.google.com/file/d/1gykFVmxgJIBcrHl_Mv7tJEtOehtVlXWI/view?usp=sharing)
 
 ## Screenshots 
 ![Screenshot of initial questioins](./assets/screen1.png)
